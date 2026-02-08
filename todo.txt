@@ -1,0 +1,53 @@
+small prerequisite tasks
+- making and moving oval shapes on annotation 
+- importing and exporting 4sc
+	technically not necessary because permanent annotations can be written over, but.. rather not
+	ok . it seems like this is not the best use of time so i think, just try to make the output editable in apple markdown, then corrections can be made, though annoying :(
+
+
+computer vision tasks
+- identify notes 
+	both quarter & half.. ornaments are probably a little ambitious 
+- calculate note value 
+	relative to scale
+	key signature -- honestly i think its not horrible to make key signature a command line argument... but it can change... but surely writing like 3s 50 4f 20 is not that bad . idk. 
+	accidentals...
+
+nice-to-haves
+- quick shift (change all c to c-sharp or something... kind of a fallback if the key sig stuff doesnt work out)
+
+colour map 
+
+0: #016e8f (C)
+1: #52d6fc (C#/Db)
+2: #1624ed (D)
+3: #669d34 (D#/Eb)
+4: #38571a (E)
+5: #ffa801 (F)
+6: #a96800 (F#/Gb)
+7: #982abc (G)
+8: #831100 (G#/Ab)
+9: #ff3a30 (A)
+10: #999999 (A#/Bb)
+11: #474747 (B)
+
+
+
+
+how i Think it should work
+
+- identify staves
+- for each row, go until find a note [how exactly to do? sliding window? how to know note size? ig usually based on staff size but must determine for weird engravings]
+- if note is indeed there and centered on that line, check for accidental, then colour if solid note and outline if half/whole note 
+
+side things
+- key signature... not quite sure
+
+project evolution
+- find and colour one line (on the staff) of perfect musescore scan that is just like, quarter note c major scale or something
+- be able to iterate over lines (on the staff)
+- iterate over lines (in the score)
+- add detection of whole and half notes 
+- accidentals 
+- key signature
+
